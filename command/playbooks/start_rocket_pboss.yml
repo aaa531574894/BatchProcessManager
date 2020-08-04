@@ -1,0 +1,6 @@
+---
+- hosts: ROCKET_PBOSS
+  remote_user: sa
+  tasks:
+    - name: "start ROCKET_PBOSS process"
+      shell: sh /home/sa/sa-center/bin/start_tf_by_code.sh "{{TF_CODES}}"

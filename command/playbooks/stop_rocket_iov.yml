@@ -1,0 +1,6 @@
+---
+- hosts: ROCKET_IOV
+  remote_user: sa
+  tasks:
+    - name: "stop ROCKET_IOV process"
+      shell: sh /home/sa/sa-center/bin/stop_tf.sh "{{TF_CODES}}"

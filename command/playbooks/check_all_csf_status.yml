@@ -1,0 +1,10 @@
+---
+- hosts: ALL_CSF
+  remote_user: sa
+  tasks:
+    - name: "check csf state"
+      shell: sh /home/sa/sa-center/bin/checkCsfStatus.sh "{{PORTS}}" "{{OUT_SIDE_IP}}"
+      register: result
+    - name: "show return msg"
+      debug: 
+        var=result.stdout_lines

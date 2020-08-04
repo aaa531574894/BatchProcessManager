@@ -1,0 +1,6 @@
+---
+- hosts: ALL_TF
+  remote_user: sa
+  tasks:
+    - name: "stop  ALL TF "
+      shell: sh /home/sa/sa-center/bin/stop_tf.sh "{{TF_CODES}}"

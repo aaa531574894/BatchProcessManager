@@ -1,0 +1,6 @@
+---
+- hosts: CBOSS_REPLY
+  remote_user: sa
+  tasks:
+    - name: "start CBOSS_REPLY process"
+      shell: sh /home/sa/sa-center/bin/start_tf_by_code.sh "{{TF_CODES}}"

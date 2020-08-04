@@ -1,0 +1,11 @@
+---
+- hosts: ALL_TF
+  remote_user: sa
+  tasks:
+    - name: "check tf state"
+      shell: sh /home/sa/sa-center/bin/checkTFStatus.sh "{{TF_CODES}}"
+      register: returnVar
+
+    - name: "show return msg"
+      debug:
+        var: returnVar.stdout_lines

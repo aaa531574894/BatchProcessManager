@@ -1,0 +1,6 @@
+#!/bin/bash
+
+
+
+ansible-playbook  /home/sa/shangxian/command/playbooks/check_csf_node1_status.yml
+

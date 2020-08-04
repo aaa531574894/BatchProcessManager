@@ -1,0 +1,6 @@
+---
+- hosts: CSF_1
+  remote_user: sa
+  tasks:
+    - name: "start CSF process"
+      shell: sh /home/sa/sa-center/bin/start_csf_by_ports.sh "{{OUT_SIDE_IP}}" "{{PORTS}}"

@@ -1,0 +1,6 @@
+---
+- hosts: ALL_TF
+  remote_user: sa
+  tasks:
+    - name: "start all TF"
+      shell: sh /home/sa/sa-center/bin/start_tf_by_code.sh "{{TF_CODES}}"

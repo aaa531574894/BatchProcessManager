@@ -1,0 +1,6 @@
+---
+- hosts: ROCKET_IOV
+  remote_user: sa
+  tasks:
+    - name: "start ROCKET_IOV process"
+      shell: sh /home/sa/sa-center/bin/start_tf_by_code.sh "{{TF_CODES}}"

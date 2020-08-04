@@ -1,0 +1,6 @@
+---
+- hosts: CSF_2
+  remote_user: sa
+  tasks:
+    - name: "stop  CSF process"
+      shell: sh /home/sa/sa-center/bin/stop_csf.sh "{{PORTS}}"

@@ -1,0 +1,12 @@
+---
+- hosts: ALL_CSF
+  remote_user: sa
+  tasks:
+    - name: "stop  CSF process"
+      shell: sh /home/sa/sa-center/bin/stop_csf.sh "{{PORTS}}"
+
+- hosts: ALL_TF
+  remote_user: sa
+  tasks:
+    - name: "stop  ALL TF "
+      shell: sh /home/sa/sa-center/bin/stop_tf.sh "{{TF_CODES}}"
